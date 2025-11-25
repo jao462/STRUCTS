@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+struct Funcionario {
+    string nome;
+    double valorHora;
+    int horas;
+};
+
+int main() {
+    int N;
+    cin >> N;
+
+    Funcionario f[100];
+
+    for (int i = 0; i < N; i++) {
+        cin >> f[i].nome >> f[i].valorHora >> f[i].horas;
+    }
+
+    for (int i = 0; i < N; i++) {
+        double pagamento = f[i].valorHora * f[i].horas;
+        cout << f[i].nome << ": " << pagamento << endl;
+    }
+}
